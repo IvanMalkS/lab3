@@ -3,6 +3,7 @@ package ru.malkov.employee;
 public class Employee {
     final String name;
     final Department department;
+    Boolean isBoos;
 
     public Employee(String name, Department department) {
         if (name == null || name.trim().isEmpty()) {
@@ -14,6 +15,7 @@ public class Employee {
 
         this.name = name;
         this.department = department;
+        this.isBoos = false;
         this.department.addEmployee(this);
     }
 

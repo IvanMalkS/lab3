@@ -3,7 +3,7 @@ package ru.malkov.bird;
 import java.util.Random;
 
 public class Cuckoo extends Bird implements ISingable {
-    private Random random;
+    private final Random random;
 
     public Cuckoo() {
         super("Cuckoo");

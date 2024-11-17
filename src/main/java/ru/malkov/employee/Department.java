@@ -1,12 +1,11 @@
 package ru.malkov.employee;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Department {
     final String name;
     Employee boss;
-    List<Employee> employees;
+    ArrayList<Employee> employees;
 
     public Department(String name) {
         if (name == null || name.trim().isEmpty()) {
@@ -29,10 +28,11 @@ public class Department {
         if (boss == null) {
             throw new IllegalArgumentException("Boss cannot be null");
         }
-        if (!employees.contains(boss)) {
-            employees.add(boss);
+        if (boss.isBoos) {
+            throw new IllegalStateException("Boss is already set");
         }
         this.boss = boss;
+        boss.isBoos = true;
     }
 
     public void addEmployee(Employee newEmployee) {
@@ -42,7 +42,7 @@ public class Department {
         this.employees.add(newEmployee);
     }
 
-    public List<Employee> getEmployees() {
+    public ArrayList<Employee> getEmployees() {
         return employees;
     }
 

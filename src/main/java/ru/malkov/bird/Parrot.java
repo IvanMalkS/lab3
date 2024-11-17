@@ -3,8 +3,8 @@ package ru.malkov.bird;
 import java.util.Random;
 
 public class Parrot extends Bird implements ISingable {
-    private String text;
-    private Random random;
+    private final String text;
+    private final Random random;
 
     public Parrot(String text) {
         super("Parrot");
